@@ -1,0 +1,57 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+coverage.xml
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (large, local-only — root level only)
+/data/
+!/data/.gitkeep
+
+# Runtime model checkpoints (training output)
+# Note: models/ is tracked for pre-trained checkpoints committed to the repo
+
+# ML artifacts
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+logs/
+tensorboard_logs/
+wandb/

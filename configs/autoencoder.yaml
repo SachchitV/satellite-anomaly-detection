@@ -1,0 +1,24 @@
+# LSTM Autoencoder training configuration
+data:
+  data_path: data/processed/merged_data/simulations_year
+  n_features: 23
+  seq_len: 256
+  window_size: 256
+  step_size: 128
+  normalization_method: standard
+  train_ratio: 0.8
+  batch_size: 32
+
+model:
+  model_type: lstm_ae
+  hidden_size: 64
+  num_layers: 2
+  dropout: 0.1
+  use_bottleneck: true
+  compression_ratio: 0.5
+
+training:
+  learning_rate: 1.0e-4
+  epochs: 100
+  early_stopping_patience: 10
+  model_save_path: models/autoencoder.pth

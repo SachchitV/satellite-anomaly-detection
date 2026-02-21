@@ -1,0 +1,27 @@
+# 1D CNN Classifier training configuration
+data:
+  data_path: data/processed/merged_data/simulations_year
+  n_features: 23
+  seq_len: 256
+  window_size: 256
+  step_size: 128
+  normalization_method: standard
+  train_ratio: 0.8
+  batch_size: 64
+
+model:
+  model_type: cnn_cls
+  n_classes: 2
+  multi_label: false
+  cnn_channels: [64, 128, 256]
+  dropout: 0.2
+
+training:
+  learning_rate: 3.0e-4
+  epochs: 10
+  early_stopping_patience: 10
+  model_save_path: models/classifier.pth
+
+autoencoder:
+  ae_model_type: lstm_ae
+  ae_checkpoint_path: models/autoencoder_best.pth
