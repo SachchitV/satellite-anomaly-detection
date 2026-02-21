@@ -126,11 +126,10 @@ See [`docs/architecture.md`](docs/architecture.md) for the full technical discus
 ## Development
 
 ```bash
-make setup     # pip install -e ".[dev,notebooks]"
-make test      # pytest tests/ -v
-make lint      # ruff check src/ tests/
-make format    # ruff format src/ tests/
-make clean     # remove build artifacts
+pip install -e ".[dev,notebooks]"   # install with dev dependencies
+pytest tests/ -v                    # run tests
+ruff check src/ tests/              # lint
+ruff format src/ tests/             # format
 ```
 
 ## License
